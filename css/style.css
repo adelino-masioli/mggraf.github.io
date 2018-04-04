@@ -107,7 +107,7 @@ li a.active{
 .slider-wrapper{
 	margin: 0;
 	padding: 0 !important;
-	background: #000 !important;
+	background: #ffffff !important;
 }
 .carousel-caption h1{
 	font-size: 157px;
@@ -142,12 +142,13 @@ li a.active{
 .carousel-control{
 	width: 5%;
 }
+/*
 .carousel-inner{
-	background: -webkit-linear-gradient(left, #000 , blue); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(left, #000, blue); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(left, #000, blue); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to left, #000 , blue); /* Standard syntax */
-}
+	background: -webkit-linear-gradient(left, #000 , blue);
+	background: -o-linear-gradient(left, #000, blue);
+	background: -moz-linear-gradient(left, #000, blue);
+	background: linear-gradient(to left, #000 , blue);
+}*/
 .item{
 	position: relative;
 }
@@ -276,7 +277,6 @@ li a.active{
 .service{
 	background: url(../img/pattern.jpg);
 	background-repeat: repeat;
-	margin-top: 40px;
 	padding-top: 70px;
 	background-position: center bottom;
 }
@@ -324,7 +324,6 @@ li a.active{
 /*team section*/
 .team{
 	padding-bottom: 60px;
-	padding-top: 80px;
 }
 .team h2{
 	font-size: 90px;
@@ -935,4 +934,21 @@ responsive area
 	.footer-para{
 		padding-left: 20px;
 	}
+}
+.singleproduct{
+	padding-top: 70px;
+}
+#page404error{
+	padding-top: 100px;
+}
+#page404error a{
+	color: #666666;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+#pageproduct{
+	padding-top: 100px;
+}
+#pageproduct img{
+	margin: auto!important;
 }
