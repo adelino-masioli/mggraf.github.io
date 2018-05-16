@@ -79,4 +79,54 @@ jQuery(document).ready(function() {
    });
 
 
-$("#contactformvalidation").validate();
+function sendMail() {
+  if(!jQuery("#contactformvalidation").valid()){
+      return false;
+  }
+  var url = jQuery("#contactformvalidation").attr('action');
+  jQuery.ajax({
+      type: 'GET',
+      url: url,
+      data: {
+          txtname:    jQuery('#txtname').val(),
+          txtemail:    jQuery('#txtemail').val(),
+          txtphone:   jQuery('#txtphone').val(),
+          txtproduct:   jQuery('#txtproduct').val(),
+          txtmessage: jQuery('#txtmessage').val()
+      },
+      success: function (data) {
+          if (data == true) {
+              jQuery('#errormessage').hide();
+              jQuery('#txtname').val('');
+              jQuery('#txtemail').val('');
+              jQuery('#txtphone').val('');
+              jQuery('#txtproduct').val('');
+              jQuery('#txtmessage').val('');
+              jQuery('#successmessage').fadeIn().text('Mensagem enviada com sucesso!');
+
+          }else {
+            return false;
+          }
+          return false;
+      }
+  });
+
+  return false;
+}
+
+$('#contactformvalidation').validate({ // initialize the plugin
+  rules: {
+      name: {
+          required: true,
+          minlength: 5
+      },
+      email: {
+          required: true,
+          email: true
+      }
+  },
+  messages: {
+    name: 'Favor informar o nome',
+    email: 'Favor informar o e-mail válido'
+  }
+});

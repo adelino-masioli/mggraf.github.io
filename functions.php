@@ -8,8 +8,8 @@ function base_url(){
         $protocol = 'http';
     }
     //return $protocol . "://" . $_SERVER['HTTP_HOST'].'/';
-    //return 'http://127.0.0.1:8083/';
-    return 'http://www.mggraf.com/';
+    return 'http://localhost:8484/';
+    //return 'http://www.mggraf.com/';
 }
 
 function set_qr(){

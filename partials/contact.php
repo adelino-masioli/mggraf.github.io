@@ -32,14 +32,14 @@
                 <div class="col-md-6 col-md-offset-1 contact-form form-only">
                     <h3>Solicite seu orçamento</h3>
 
-                    <form class="form" method="GET" action="http://infila.com.br/emailservice/mggraf/sendmail" id="contactformvalidation">
+                    <form class="form" method="GET" action="http://frecar.com.br/api/emailservice/sendmail" id="contactformvalidation">
                         <input type="hidden" name="apikey" value="mggraf.com">
-                        <input class="name" name="name" type="text" placeholder="Informe seu nome" required>
-                        <input class="email" type="email" name="email" placeholder="Informe seu email" required>
-                        <input class="phone" type="text" name="phone" placeholder="Informe seu telefone" required>
-                        <input class="name" type="text" name="product" placeholder="Informe o produto">
-                        <textarea class="message" name="description" id="message" cols="30" rows="10" placeholder="Descreva sua necessidade"></textarea>
-                        <input class="submit-btn" type="submit" value="ENVIAR ORÇAMENTO">
+                        <input class="name" name="name" id="txtname" type="text" placeholder="Informe seu nome"  required>
+                        <input class="email" type="email" name="email" id="txtemail" placeholder="Informe seu email" required>
+                        <input class="phone" type="text" name="phone" id="txtphone" placeholder="Informe seu telefone">
+                        <input class="name" type="text" name="product" id="txtproduct" placeholder="Informe o produto">
+                        <textarea class="message" name="description" id="txtmessage" cols="30" rows="10" placeholder="Descreva sua necessidade"></textarea>
+                        <input class="submit-btn" type="button" onclick="sendMail()" value="ENVIAR ORÇAMENTO">
                     </form>
                 </div>
 
